@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="73" height="17" viewBox="0 0 73 17">
+    <defs>
+        <filter id="prefix__a" width="123.8%" height="215.4%" x="-11.9%" y="-57.7%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0.856657609 0 0 0 0 1 0 0 0 0.5 0"/>
+        </filter>
+        <text id="prefix__b" font-family="Montserrat-Medium, Montserrat" font-size="10" font-weight="400" letter-spacing=".5">
+            <tspan x="689.075" y="499">OPEN BET</tspan> <tspan x="744.455" y="499">A</tspan>
+        </text>
+    </defs>
+    <g fill="#90DEFF" fill-rule="evenodd" transform="translate(-684 -487)">
+        <use filter="url(#prefix__a)" xlink:href="#prefix__b"/>
+        <use xlink:href="#prefix__b"/>
+        <use xlink:href="#prefix__b"/>
+    </g>
+</svg>

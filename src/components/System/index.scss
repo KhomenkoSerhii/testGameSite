@@ -1,0 +1,249 @@
+.system {
+  height: 1200px;
+  background-image: linear-gradient(#000000, #a7ac7a);
+  position: relative;
+  
+  &::after {
+    content: '';
+    width: 100%;
+    height: 740px;
+    background-image: url('../../assets/images/baddies.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    overflow: hidden;
+    background-size: cover;
+  }
+
+  .system__heading {
+    position: absolute;
+    top: -122px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  &__border {
+    background: linear-gradient(to right, rgba(57, 78, 96, 0), #d4f0ff, rgba(57, 78, 96, 0));
+    height: 2px;
+    opacity: 0.5;
+    margin: auto;
+    margin-bottom: 30px;
+    width: 90%;
+
+    &:last-child {
+      margin-bottom: 0;
+      margin-top: 30px;
+    }
+  }
+
+  &__block {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 35px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+
+    &:first-child::before {
+      content: url('../../assets/forms/worker-2.png');
+      width: 76px;
+      height: 80px;
+      position: absolute;
+      top: -70px;
+      left: 10px;
+      z-index: 2;
+
+    }
+
+    &:last-child::after {
+      content: url('../../assets/forms/raken-rider.png');
+      transform: scaleX(-1);
+      position: absolute;
+      right: 44px;
+      bottom: -101px;
+      z-index: 2;
+
+    }
+  }
+
+  &__row {
+    display: flex;
+    padding: 0 40px;
+  }
+
+  &__title {
+    color: white;
+    opacity: 0.5;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__prepare {
+    position: absolute;
+    background-color: black;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    
+    &-content {
+      transform: translateY(-130px);
+    }
+
+    .system__heading {
+      position: initial;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__subtitle {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 22px;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 0.85px;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    margin: 0;
+    width: 260px;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 23px;
+    margin-bottom: 30px;
+  }
+}
+
+.characteristics {
+  margin-top: 15px;
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__item {
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 1.31px;
+    font-size: 14px;
+    color: white;
+
+    &-mob {
+      display: none;
+    }
+  }
+}
+
+.requirements {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+
+  &__item {
+    line-height: 30px;
+    color: white;
+    font-weight: 200;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .system {
+    background-image: linear-gradient(#000000, #465c60);
+    height: 1440px;
+    
+    &::after {
+      background-image: url('../../assets/responsive/baddies.png');
+    }
+
+    &__row {
+      flex-direction: column;
+    }
+
+    &__block {
+      margin-bottom: 40px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .system {
+    padding-top: 40px;
+    height: 2650px;
+    
+    // &__prepare {
+    //   background: none;
+    // }
+
+    &::after {
+      height: 793px;
+      background-image: url('../../assets/responsive-mob/baddies.png');
+      bottom: 200px;
+    }
+
+    &__block {
+      padding: 0;
+      margin-bottom: 250px;
+
+      &:first-child::before {
+        left: 50%;
+        transform: translateX(-64%);
+        z-index: 1;
+      }
+  
+      &:last-child::after {
+        top: -215px;
+        right: 20px;
+      }
+    }
+
+    &__title {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .characteristics {
+    display: none;
+
+    &__item {
+      &-mob {
+        display: block;
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 1.31px;
+        font-size: 14px;
+        color: white;
+      }
+    }
+  }
+
+  .requirements {
+    &__item {
+      margin-bottom: 27px;
+    }
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .system {
+    height: 1495px;
+
+    &::after {
+      height: 989px;
+    }
+  }
+}

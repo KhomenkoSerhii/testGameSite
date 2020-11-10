@@ -1,0 +1,277 @@
+.header {
+  height: 74px;
+  background-color: transparent;
+  position: absolute;
+  z-index: 11;
+  width: 100%;
+
+  .header__choice {
+    margin-right: 60px;
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  &:hover {
+    transition: background-color 0.5s;
+    background-color: #00000066;
+
+    .header__logo-wrapper {
+      &::after {
+        transition: opacity 0.5s;
+        opacity: 1;
+      }
+    }
+  }
+  
+  &__wrapper {
+    padding: 0 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 100px;
+    height: 62px;
+    cursor: pointer;
+  }
+
+  &__logo-wrapper {
+    position: relative;
+    margin-right: 60px;
+    transform: translateY(7px);
+
+    &::after {
+      content: '';
+      border-bottom: 22px solid #00000066;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      height: 0;
+      width: 150px;
+      display: block;
+      transform: rotate(180deg) translateX(50%);
+      position: absolute;
+      bottom: -19px;
+      left: 50%;
+      opacity: 0;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__login {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.46px;
+    cursor: pointer;
+    padding: 0 40px;
+    line-height: 34px;
+  }
+
+  &__register {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.42px;
+  }
+
+  &__choice {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 200;
+
+    &-icon {
+      width: 21px;
+      height: 19px;
+      margin-right: 5px;
+    }
+
+    &--active {
+      opacity: 1!important;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &:first-child {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  width: 460px;
+  justify-content: space-between;
+  position: relative;
+  height: 74px;
+
+  &__item {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      transition: color 0.6s;
+      color: #ffffff80;
+    }
+
+    &:last-child {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &:hover .dropdown {
+        display: block;
+      }
+    }
+  }
+}
+
+.triangle {
+  margin-left: 5px;
+  width: 0; 
+  height: 0; 
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 3px solid #fff;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  position: relative;
+  height: 74px;
+
+  &:hover {
+    .account-dropdown {
+      display: block;
+    }
+  }
+
+  &__img {
+    width: 32px;
+    height: 43px;
+    margin-top: 10px;
+
+    &--wrapper {
+      height: 36px;
+      width: 36px;
+      background-color: #ffffff1a;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+
+  &__name {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    letter-spacing: 0.46px;
+    font-size: 12px;
+    margin-left: 10px;
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    background-color: #00000066;
+    height: 60px;
+
+    &__user {
+      .triangle {
+        display: none;
+      }
+    }
+
+    &:hover {
+      .account-dropdown {
+        display: none;
+      }
+    }
+
+    .header__wrapper {
+      padding: 0 15px;
+    }
+
+    &__burger {
+      width: 17px;
+      height: 12px;
+      display: block;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    &__logo {
+      width: 61px;
+      height: 37px;
+    }
+
+    &__logo-wrapper {
+      transform: translateY(3px);
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &__navigation {
+      display: none;
+    }
+
+    // &__login {
+    //   display: none;
+    // }
+
+    .button {
+      padding: 8px 9px;
+
+      &__img {
+        margin-right: 0;
+      }
+
+      &__text-visible {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .header {
+    .header__choice {
+      display: none;
+    }
+
+    &__login {
+      padding: 0 20px;
+    }
+  }
+}

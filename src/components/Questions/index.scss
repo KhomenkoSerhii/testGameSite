@@ -1,0 +1,92 @@
+.questions {
+  height: 802px;
+  // background-image: url('../../assets/images/baddies.png');
+  position: relative;
+  box-sizing: border-box;
+  // padding: 40px 0 130px;
+  background-position: bottom;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 4;
+  
+  .questions__heading {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  &__img {
+    margin-left: 10px;
+  }
+
+  &__button-bottom {
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.42px;
+    color: white;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 7px rgba(140, 86, 43, 0.53);
+  }
+
+  &__icon {
+    width: 17px;
+    height: 12px;
+    margin-right: 5px;
+    filter: drop-shadow(0px 1px 1px #0000003b);
+  }
+
+  &__button {
+    position: absolute;
+    top: 20px;
+    z-index: 3;
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 130px;
+    z-index: 4;
+  }
+
+  &__bg {
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    top: 0;
+    height: 1000px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .questions {
+    background-image: url('../../assets/responsive/baddies.png');
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .questions {
+    height: 862px;
+    background-image: url('../../assets/responsive-mob/baddies.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+
+    &__content {
+      bottom: 0px;
+      width: 100%;
+      background: black;
+      padding: 22px 0 120px;
+      text-align: center;
+    }
+  }
+}

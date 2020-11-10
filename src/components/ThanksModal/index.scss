@@ -1,0 +1,101 @@
+.thanks {
+  width: 100vw;
+  height: 100vh;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  z-index: 2;
+  background-color: black;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../assets/forms/thanks-bg.png');
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+    background-size: contain;
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    z-index: -1;
+  }
+
+  .account {
+    &__border-top {
+      width: 185px;
+    }
+
+    &__border-bottom {
+      width: 185px;
+    }
+
+    &__text {
+  
+      &::before {
+        left: 6px;
+        top: -6px;
+
+      }
+  
+      &::after {
+        content: '';
+        right: 7px;
+        top: -6px;
+      }
+    }
+  }
+
+  .modal__heading {
+    font-size: 22px;
+    letter-spacing: 0.85px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .thanks {
+    height: 756px;
+
+    &::before {
+      background-position: center;
+      background-size: cover;
+      height: 120vh;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .thanks {
+    height: 756px;
+
+    .login__content {
+      height: 413px;
+    }
+  }
+
+  .thanks::before {
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .thanks::after {
+    content: '';
+    opacity: 0.7;
+    background-color: #000000;
+    width: 100vw;
+    height: 756px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}

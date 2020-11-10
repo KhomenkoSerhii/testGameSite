@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>magnifier</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FCF7E9" offset="0%"></stop>
+            <stop stop-color="#B8A978" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.3" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#FCF7E9" offset="0%"></stop>
+            <stop stop-color="#B8A978" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-4" cx="11.5" cy="11.5" r="11.5"></circle>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="elements/magnifier-copy" transform="translate(2.000000, 2.000000)">
+            <g id="magnifier">
+                <g id="Group-2">
+                    <path d="M18.9267578,22.5682373 C17.9442322,21.5857117 18.7543686,20.7194198 19.7368942,19.7368942 C20.7194198,18.7543686 21.4306824,18.2209656 22.413208,19.2034912 L29.2631058,25.7050659 C30.2456314,26.6875915 30.2456314,28.2805802 29.2631058,29.2631058 C28.2805802,30.2456314 26.6875915,30.2456314 25.7050659,29.2631058 L18.9267578,22.5682373 Z" id="Line" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                    <g id="Oval">
+                        <use stroke="url(#linearGradient-3)" stroke-width="1" fill="url(#linearGradient-2)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                        <circle stroke="url(#linearGradient-1)" stroke-width="2" cx="11.5" cy="11.5" r="12.5"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

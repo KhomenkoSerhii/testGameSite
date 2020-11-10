@@ -1,0 +1,145 @@
+.basics {
+  // height: 1630px;
+  height: 2000px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-top: 130px;
+  box-sizing: border-box;
+  background-image: url('../../assets/about/planet.png');
+  background-repeat: no-repeat;
+
+
+  &::before {
+    content: '';
+    display: block;
+    height: 90px;
+    background-image: url('../../assets/about/top-panel.png');
+    background-position: center;
+    // background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -63px;
+    width: 100%;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 162%;
+    // height: 100%;
+    background-image: linear-gradient(#0b1d43, #0a1525 100%);
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__subtitle {
+    margin: 20px 0;
+    letter-spacing: 1.31px;
+    line-height: 20px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+  }
+
+  &__content {
+    height: 700px;
+    padding-top: 100px;
+  }
+
+  &__blocks {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    position: relative;
+  }
+
+  &__cross {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .galaxy__heading {
+    margin-bottom: 30px;
+  }
+}
+
+.cross-horizontal {
+  background: linear-gradient(to right, rgba(57, 78, 96, 0.2), #d4f0ff, rgba(57, 78, 96, 0.2));
+  height: 2px;
+  opacity: 1;
+  width: 432px;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.cross-vertical {
+  background: linear-gradient( rgba(49, 74, 95, 0.2), #d4f0ff, rgba(57, 78, 96, 0.2));
+  width: 2px;
+  opacity: 1;
+  height: 432px;
+  position: absolute;
+  top: -216px;
+  left: 50%;
+  transform: translate(-1px, 0);
+}
+
+@media screen and (max-width: 1024px) {
+  .basics  {
+    padding-top: 100px;
+
+    &::before {
+      top: -53px;
+    }
+
+    &::after {
+      height: 175%;
+    }
+
+    &__content {
+      height: 850px;
+    }
+
+    &__blocks {
+      width: unset;
+    }
+
+    .galaxy__heading {
+      width: 425px;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .basics {
+    &::after {
+      height: 225%;
+    }
+
+    &__cross {
+      display: none;
+    }
+
+    &__content {
+      height: 1550px;
+    }
+
+    .galaxy__heading {
+      width: 311px;
+    }
+  }
+}

@@ -1,0 +1,165 @@
+.footer {
+  height: 263px;
+  background-color: #000000;
+  border-top: 1px solid #00000080;
+  box-sizing: border-box;
+
+  &__border {
+    background: linear-gradient(to right, rgba(57, 78, 96, 0.2), #d4f0ff, rgba(57, 78, 96, 0.2));
+    height: 1px;
+    opacity: 0.2;
+  }
+
+  &__wrapper {
+    padding: 0 75px 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100% - 1px);
+  }
+
+  &__logo {
+    width: 160px;
+    height: 100px;
+  }
+
+  &__left {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__nav-item {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 36px;
+    letter-spacing: 1.31px; 
+    cursor: pointer;
+
+    &:hover {
+      transition: opacity 0.5s;
+      opacity: 0.5;
+    }
+    
+    &--thin {
+      font-weight: 200;
+      text-transform: none;
+      letter-spacing: initial;
+    }
+  }
+
+  &__headline {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.31px; 
+    margin-bottom: 25px;
+  }
+
+  &__copyright {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    opacity: 0.5;
+    font-size: 12px;
+    line-height: 23px;
+  }
+
+  &__medias {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    width: 17px;
+    height: 19px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    height: 808px;
+    padding-bottom: 80px;
+
+    &__border {
+      margin-bottom: 78px;
+      opacity: 0.5;
+    }
+
+    &__wrapper {
+      flex-direction: column;
+      height: auto;
+    }
+
+    &__logo {
+      margin-bottom: 50px;
+    }
+
+    &__left {
+      flex-direction: column;
+    }
+
+    &__nav {
+      text-align: center;
+      margin-bottom: 20px;
+
+      &-item {
+        line-height: 50px;
+      }
+
+      &-item--thin {
+        line-height: 45px;
+      }
+
+      &:last-child {
+        margin-bottom: 60px;
+      }
+    }
+
+    &__icon {
+      width: 31px;
+      height: 26px;
+    }
+
+    &__headline {
+      text-align: center;
+    }
+
+    &__medias {
+      width: 300px;
+      margin-bottom: 45px;
+    }
+
+    &__copyright {
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .footer {
+    padding-bottom: 0;
+    height: 772px;
+  }
+}

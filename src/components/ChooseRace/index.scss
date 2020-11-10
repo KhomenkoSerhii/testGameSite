@@ -1,0 +1,71 @@
+.chooserace {
+  height: 1200px;
+  background-color: black;
+  background-image: url('../../assets/about/northern-lights.png');
+  position: relative;
+
+  &__subtitle {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    letter-spacing: 1.31px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .chooserace__heading {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin: auto;
+    margin-bottom: 90px;
+    width: 452px;
+    font-size: 14px;
+    line-height: 23px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    color: white;
+  }
+
+  &__content {
+    width: 910px;
+    margin: auto;
+
+    .chooserace__text {
+      width: 678px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 33px;
+    letter-spacing: 1px;
+    color: white;
+    width: 393px;
+    margin: 0;
+    margin: auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+
+  &__heroes {
+    display: flex;
+    justify-content: space-between;
+  }
+}

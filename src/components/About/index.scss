@@ -1,0 +1,125 @@
+.about {
+  height: 1305px;
+  background-image: linear-gradient(to bottom, #000000 26%, #37494b 117%);
+  box-sizing: border-box;
+  padding-top: 50px;
+  box-shadow: 7px 200px 54px 300px #2d3b3d;
+  position: relative;
+  z-index: 4;
+
+  .about__heading {
+    margin-bottom: 30px;
+    opacity: 0;
+  }
+
+  &__shadow {
+    height: 0;
+    width: 100%;
+    position: absolute;
+    top: -50px;
+    background-color: transparent;
+    z-index: 5;
+    box-shadow: 7px 0 54px 60px #00000066;
+
+  }
+
+  &__content {
+    max-width: 910px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__text {
+    line-height: 30px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    margin: 0;
+    color: white;
+    margin-bottom: 72px;
+  }
+  
+  .about__text {
+    opacity: 0;
+  }
+
+  &__video--wrapper {
+    margin: auto;
+    width: 990px;
+    height: 556px;
+    background-image: url('../../assets/images/tile-big.svg');
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 85px;
+  }
+
+  &__video {
+    width: 930px;
+    height: 520px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about {
+    padding-top: 0;
+    height: 750px;
+    
+    &__text {
+      width: 613px;
+    }
+
+    &__content {
+      display: none;
+    }
+
+    &__video {
+      width: 734px;
+      height: 414px;
+
+      &--wrapper {
+        background-image: none;
+        width: 734px;
+        height: 414px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .about {
+    box-sizing: border-box;
+    padding-top: 150px;
+    height: 713px;
+
+    &__text {
+      width: 100%;
+      padding: 0 20px;
+      box-sizing: border-box;
+      background-color: black;
+    }
+
+    &__video {
+      width: 375px;
+      height: 212px;
+
+      &--wrapper {
+        width: 375px;
+        height: 212px;
+      }
+    }
+  }
+}

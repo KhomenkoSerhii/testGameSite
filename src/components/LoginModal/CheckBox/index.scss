@@ -1,0 +1,51 @@
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+
+  &:checked ~ .checkmark {
+    display: inline-block;;
+  }
+
+  &__wrapper {
+    position: relative;
+    margin-right: 8px;
+    height: 16px;
+    width: 16px;
+    box-sizing: border-box;
+    border: 1px solid #b3d1ef;
+    border-radius: 1px;
+  }
+
+  &__position {
+    display: flex;
+    align-items: center;
+  }
+
+  &__label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 22px;
+    color: white;
+  }
+}
+
+.checkmark {
+  display: none;
+  width: 15px;
+  height:15px;
+  background-image: url('../../../assets/forms/tick.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (max-width: 375px) {
+  .checkbox {
+    &__wrapper {
+      border: 1px solid #b3d1ef80;
+    }
+  }
+}

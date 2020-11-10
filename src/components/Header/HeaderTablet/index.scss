@@ -1,0 +1,86 @@
+.header-tablet {
+  background-color: black;
+  height: 100vh;
+  // top: -100vh;
+  background-image: url('../../../assets/about/northern-lights.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: -175px;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  padding-top: 147px;
+  padding-bottom: 70px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__currency {
+    display: none;
+  }
+  
+  .footer {
+    &__nav:first-child {
+      margin-bottom: 60px;
+    }
+
+    &__right {
+      align-items: center;
+    }
+  
+    &__medias {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .header-tablet {
+    padding-top: 80px;
+    animation-name: drop;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+
+    .footer {
+      &__nav:first-child {
+        margin-bottom: 30px;
+      }
+
+      &__nav:last-child {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__currency {
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 200;
+      padding: 20px 0;
+    }
+
+    &__border {
+      background: linear-gradient(to right, rgba(57, 78, 96, 0.2), #d4f0ff, rgba(57, 78, 96, 0.2));
+      height: 1px;
+      opacity: 0.6;
+
+      &:last-child {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@keyframes drop {
+  from {
+    top: -100vh;
+  } to {
+    top: 0;
+  }
+}

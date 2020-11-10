@@ -1,0 +1,82 @@
+.slide {
+  width: 433px;
+  height: 316px;
+  background-image: url('../../../assets/images/small-tile.svg');
+  margin: 0 19px;
+  cursor: url('../../../assets/images/cursor.svg'), auto;
+
+  &__img {
+    transition: filter 0.5s;
+
+    &:hover {
+      transition: filter 0.5s;
+      filter: brightness(0.4);
+    }
+  }
+}
+
+.slick-slider {
+  width: 990px!important;
+  margin: auto!important;
+  padding: 0 25px!important;
+}
+
+.slick-dots {
+  width: 85%!important;
+
+  li {
+    margin: 0;
+  }
+  
+  button::before {
+    color: #cec39d !important;
+  }
+
+  .slick-active {
+    button::before {
+      color: #cec39d !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .slide {
+    width: 276px;
+    height: 206px;
+    background-size: contain;
+    margin: 0 28px;
+    
+    &__img {
+      width: 276px;
+      height: 206px;
+      object-fit: contain;
+    }
+  }
+
+  .slick-slider {
+    width: initial!important;
+    width: 650px!important;
+  }
+
+  .slick-slide {
+    width: 295px!important;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .slick-slider {
+    width: initial!important;
+    width: initial!important;
+    padding: 0 44px!important;
+  }
+
+  .slick-slide {
+    width: 325px!important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .slick-slider {
+    padding: 0 25px!important;
+  }
+}

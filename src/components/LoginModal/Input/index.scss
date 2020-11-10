@@ -1,0 +1,67 @@
+.input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #b2d0e080;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 8px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 23px;
+  color: white;
+  z-index: 2;
+  position: relative;
+  // box-shadow: 0 10px 63px 0 rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  caret-color: #80d4f8;
+
+  &:focus {
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5), inset 0 1px 30px 0 #80d4f8;
+    border: solid 1px rgba(60, 197, 255, 0.8);
+    outline: none;
+  }
+
+  &::placeholder {
+    font-weight: 200;
+    color: #ffffff80;
+    letter-spacing: initial;
+  }
+
+  &__bg {
+    background-image: linear-gradient(#7d92a5 72%, #ffffff 170%);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &__wrapper {
+    height: 40px;
+    position: relative;
+
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+  } 
+
+  &[type="password"] {
+    font-weight: 900;
+    letter-spacing: 1.5px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .input {
+    &__bg {
+      opacity: 0.2;
+    }
+  }
+}

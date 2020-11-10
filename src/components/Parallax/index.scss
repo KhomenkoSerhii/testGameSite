@@ -1,0 +1,148 @@
+.parallax {
+  &__start {
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 7px 6px 54px 95px #171327;
+    overflow: initial !important;
+    margin-bottom: 470px;  
+  }
+  &-banner {    
+    &::after {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(rgba(255,0,0,0), #171327);
+    }
+  }
+
+  &-outer {
+    z-index: 2;
+
+    &:first-child {
+      overflow: hidden;
+    }
+
+    &:nth-child(3) {
+      // z-index: 3 !important;
+    }
+  }
+}
+
+.welcome {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__logo {
+    width: 370px;
+    height: 300px;
+  }
+
+  &__button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    min-width: 120px;
+    line-height: 20px;
+    text-align: center;
+
+    &--position {
+      transform: translateY(-20px);
+    }
+  }
+
+  &__beta {
+    width: 82px;
+    height: 28px;
+  }
+
+  &__border {
+    border-radius: 6px;
+    padding: 2px;
+    box-shadow: 0 2px 44px 0 rgba(0, 0, 0, 0.78);
+    background-image: linear-gradient(#66a3e0, #3e729f);
+    transform: translateY(-30px);
+    position: relative;
+    z-index: -1;
+  }
+
+  &__inside {
+    width: 82px;
+    height: 28px;
+    text-align: center;
+    border-radius: 3px;
+    background-image: linear-gradient(#396da1, #2b5375);
+    box-shadow: inset 0 1px 6px 0 #16354f;
+    padding-top: 10px;
+    box-sizing: border-box;
+    
+    color: #90deff;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .parallax {
+    &-banner::after {
+      content: none;
+    }
+
+    &-outer {
+      display: none;
+    }
+
+    &__start {
+      background-image: url('../../assets/responsive/bg-hero-mob.png');
+      height: 1100px!important;
+      background-size: cover;
+      margin-bottom: 0;
+    }
+  }
+
+  .welcome {
+    top: 33%;
+    
+    &__logo {
+      width: 270px;
+      height: 220px;
+      margin-bottom: 10px;
+    }
+
+    &__button--position {
+      transform: none;
+    }
+
+    &__border {
+      transform: translateY(-15px);
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .parallax {
+    &__start {
+      background-image: url('../../assets/responsive-mob/bg-hero-mob.png');
+      height: 816px!important;
+    }
+  }
+
+  .welcome {
+    top: 40%;
+
+    &__inside {
+      padding-top: 12px;
+    }
+  }
+}

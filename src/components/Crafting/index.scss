@@ -1,0 +1,158 @@
+.crafting {
+  .crafting__heading {
+    margin-bottom: 30px;
+  }
+
+  .galaxy__text {
+    width: 678px;
+
+    &:first-of-type {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+    height: 600px;
+    // background-image: url('../../assets/about/planets.png');
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      background-image: url('../../assets/about/planets.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: -100px;
+      left: 0;
+      width: 100%;
+      height: 800px;
+    }
+  }
+
+  &__exchange {
+    width: 1130px;
+    margin: auto;
+    height: 350px;
+    margin-bottom: 30px;
+    position: relative;
+
+    .galaxy__border:last-child {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 160px;
+  }
+
+  &__tome {
+    width: 159px;
+    height: 230px;
+    transform: rotate(14deg);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:nth-child(2) {
+      transform: translateY(60px);
+    }
+
+    span {
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      font-size: 14px;
+      text-transform: uppercase;
+      line-height: 23px;
+    }
+
+    img {
+      height: 130px;
+      width: 130px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__items-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .crafting {
+    &__exchange {
+      width: 613px;
+      height: 819px;
+    }
+
+    &__row {
+      flex-direction: column;
+      justify-content: space-between;
+      height: 85%;
+      padding: 0 100px;
+    }
+
+    &__items-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 410px;
+    }
+
+    &__arrow {
+      transform: rotate(90deg);
+    }
+
+    .galaxy__text {
+      width: 491px;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .crafting {
+    &__content {
+      background-image: none;
+    }    
+    
+    .galaxy__text {
+      width: 260px;
+      transform: translateY(-30px);
+    }
+
+    &__exchange {
+      width: 345px;
+      height: 750px;
+    }
+
+    &__items-wrapper {
+      width: 345px;
+    }
+
+    &__item {
+      img {
+        width: 104px;
+        height: 104px;
+      }
+    }
+
+    &__row {
+      padding: 0;
+    }
+
+    .galaxy__border:last-child {
+      bottom: -140px;
+    }
+  }
+}

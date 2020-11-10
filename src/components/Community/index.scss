@@ -1,0 +1,118 @@
+.community {
+  height: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 23px 30px 82px 56px #171327;
+  
+  &__bg {
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    top: 0;
+  }
+
+  .community__heading {
+    margin-bottom: 55px;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+
+.community__button {
+    padding: 15px 16.5px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 250px 200px;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0.4) 26%, rgba(0,0,0,0.4) 35%, rgba(255,255,255,0) 64%);
+    position: absolute;
+    z-index: 6;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__about {
+
+    &-pos {
+      position: absolute;
+      bottom: -200px;
+      z-index: 3;
+
+      .about__text {
+        max-width: 910px;
+        margin: auto;
+        text-align: center;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .community {
+    height: 1000px;
+    background-image: url('../../assets/responsive/fores-mob.png');
+
+
+    &__content {
+      top: -250px;
+      padding-left: 90px;
+      padding-right: 90px;
+    }
+
+    &__about-pos {
+      bottom: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .community__heading  {
+    width: 350px;
+  }
+
+  .community {
+    background-image: url('../../assets/responsive-mob/fores-mob.png');
+    background-size: contain;
+    height: 1200px;
+    box-shadow: none;
+
+    &__content {
+      width: 375px;
+      padding: 250px 0;
+    }
+
+    &__buttons {
+      width: 90%;
+    }
+
+    &__about {
+      width: 350px;
+      margin: auto!important;
+
+      &-pos {
+        bottom: -100px;
+      }
+    }
+  }
+} 

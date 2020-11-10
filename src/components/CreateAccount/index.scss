@@ -1,0 +1,56 @@
+.register {
+  
+  &__content {
+    width: 456px;
+    height: 521px;
+    background-image: url('../../assets/forms/big-tile.png');
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 60px 60px 40px;
+    box-sizing: border-box;
+  }
+
+  .account {
+    &__border-top {
+      width: 113px;
+    }
+
+    &__border-bottom {
+      width: 113px;
+    }
+
+    &__text {
+  
+      &::before {
+        left: 4px;
+        top: -6px;
+
+      }
+  
+      &::after {
+        content: '';
+        right: 4px;
+        top: -6px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .register {
+    &__content {
+      background-image: none;
+      height: unset;
+      transform: translate(-50%, -48%);
+      width: 347px;
+      padding: 0;
+    }
+
+    .button {
+      width: 180px;
+    }
+  }
+}

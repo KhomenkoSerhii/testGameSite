@@ -1,0 +1,149 @@
+.heroes {
+  height: 900px;
+  background-color: black;
+  // background-image: url('../../assets/about/northern-lights.png');
+  box-sizing: border-box;
+  padding-top: 50px;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    display: block;
+    background-image: url('../../assets/about/northern-lights.png');
+    height: 1200px;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    top: -200px;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__content {
+    display: flex;
+    width: 1280px;
+    margin: auto;
+    position: relative;
+
+    &::after {
+      content: '';
+      background: linear-gradient( rgba(49, 74, 95, 0.2), #d4f0ff, rgba(57, 78, 96, 0.2));
+      width: 2px;
+      opacity: 0.4;
+      height: 432px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-2px, 0);
+    }
+  }
+
+  &__block {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+.block {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 50px;
+
+  .block__heading {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    width: 453px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color: white;
+    font-size: 14px;
+    line-height: 23px;
+    text-align: center;
+    font-weight: 200;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    span {
+      color: white;
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 23px;
+      font-weight: 600;
+      letter-spacing: 1.31px;
+      margin-top: 20px;
+    }
+
+    &--locked {
+      &::after {
+        content: url('../../assets/about/question.svg');
+        position: absolute;
+        top: 50%;
+        transform: translateY(-100%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .heroes {
+    height: 1250px;
+    
+    &__content {
+      width: 100%;
+      flex-direction: column;
+
+      &::after {
+        content: none;
+      }
+    }
+
+    &__block {
+      width: 100%;
+      padding: 0 75px;
+      margin-bottom: 120px;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .heroes {
+    height: 2411px;
+
+    &__block {
+      padding: 0;
+      margin-bottom: 70px;
+    }
+  }
+
+  .block {
+    &__row {
+      flex-direction: column;
+    }
+
+    &__hero {
+      margin-bottom: 40px;
+    }
+
+    &__text {
+      width: 345px;
+    }
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .heroes::after {
+    height: 1300px;
+  }
+}

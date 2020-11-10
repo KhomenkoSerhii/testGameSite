@@ -1,0 +1,112 @@
+.strategic {
+  height: 1067px;
+  background-image: url('../../assets/about/hero-strategic.png');
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 200px;
+  background-color: black;
+  background-size: cover;
+  
+  &::before {
+    content: '';
+    display: block;
+    height: 90px;
+    background-image: url('../../assets/about/top-panel.png');
+    background-position: center;
+    // background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -60px;
+    width: 100%;
+  }
+
+  .strategic__heading {
+    margin-bottom: 30px;
+  }
+
+  .galaxy__text {
+    width: 680px;
+    margin-bottom: 100px;
+
+    &:first-of-type {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__img {
+    width: 200px;
+    height: 200px;
+  }
+
+  &__classes {
+    width: 1260px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__class {
+    width: 342px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  &__name {
+    margin: 20px 0;
+    letter-spacing: 1.31px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 200;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .strategic {
+    background-image: url('../../assets/responsive/hero-strategic-mob.png');
+    height: 1900px;
+    background-repeat: no-repeat;
+
+    &::before {
+      top: -53px;
+    }
+
+    &__classes {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__class {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .strategic {
+    padding-top: 150px;
+    height: 2000px;
+    
+    .galaxy__text {
+      width: 344px;
+    }
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .strategic {
+    height: 1267px;
+    background-position: bottom;
+  }
+}

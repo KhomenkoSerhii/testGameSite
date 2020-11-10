@@ -1,0 +1,141 @@
+.galaxy {
+  // background-image: linear-gradient(#0b1d43, #0a1525);
+  // background-image: linear-gradient(#0a1525, #0b1d43);
+  // background: #0e1b31;
+  margin-top: -150px;
+  height: 800px;
+  z-index: -1;
+  // padding-top: 150px;
+  width: 100%;
+  
+  &__content {
+    position: relative;
+  }
+
+  &__text {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 23px;
+    color: white;
+    width: 905px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  &__questions {
+    width: 677px;
+    min-height: 150px;
+    margin: auto;
+    margin-bottom: 70px;
+  }
+
+  &__border {
+    background: linear-gradient(to right, rgba(57, 78, 96, 0), #d4f0ff, rgba(57, 78, 96, 0));
+    height: 2px;
+    opacity: 0.5;
+    margin: auto;
+    margin-bottom: 40px;
+    width: 90%;
+
+    &:last-child {
+      margin-bottom: 0;
+      margin-top: 40px;
+    }
+  }
+
+  &__question {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.85px;
+    color: white;
+    font-weight: 700;
+    margin: 0;
+
+    &:first-of-type {
+      margin-bottom: 20px;
+    }
+
+    span {
+      color: #cec39d;
+    }
+  }
+
+  &__exchange {
+    width: 500px;
+    margin: auto;
+    margin-bottom: 150px;
+
+    .galaxy__text {
+      width: 452px;
+    }
+  }
+
+  &__images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  &__tome {
+    width: 115px;
+    height: 166px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .galaxy {
+    height: 1200px;
+    padding-top: 155px;
+    padding-bottom: 50px;
+
+    &__text {
+      width: 615px;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .galaxy {
+    padding-top: 1275px;
+    height: 1300px;
+    
+    &__text {
+      width: 345px;
+    }
+
+    &__questions {
+      width: 345px;
+    }
+
+    &__question {
+      font-size: 20px;
+
+      span {
+        display: block;
+      }
+    }
+
+    &__images {
+      flex-direction: column;
+      height: 450px;
+    }
+
+    &__exchange {
+      width: 347px;
+      text-align: center;
+
+      .galaxy__text {
+        width: 345px;
+      }
+    }
+
+    &__arrow {
+      transform: rotate(90deg);
+    }
+  }
+}
